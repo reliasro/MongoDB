@@ -1,4 +1,4 @@
-# MongoDB Atlas CRUD Consolde Application
+# MongoDB Atlas CRUD Console Application
 A trivial CRUD console application.
 
 ## Goal
