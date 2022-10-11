@@ -19,8 +19,9 @@ namespace Soinsoft.ReadyAsset.MongoDB
             //Create your MongoDB Atlas account and replace the connection string with yours
             //Create a database, collection and give permission to your IP Address
             //replace database/collection with the one you like
+            var atlas_connection = Environment.GetEnvironmentVariable("MONGODB_CONNECTION");
 
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://reliasro:uiaArxAMqsYnbR5S@cluster0.cavntu2.mongodb.net/?retryWrites=true&w=majority");
+            var settings = MongoClientSettings.FromConnectionString(atlas_connection);
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);
             _client = new MongoClient(settings);
             _database = _client.GetDatabase("ReadyAsset");
